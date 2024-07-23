@@ -28,26 +28,6 @@ session_start();
                         $motdepasse = mysqli_real_escape_string($con,sha1($_POST['motdepasse']));
                         $_SESSION['id'] = $verify_query['id'];
 
-                        /*$result = mysqli_query($con,"SELECT matricule FROM users WHERE matricule='$matricule' AND motdepasse='$motdepasse'") or die("Section échouée");
-
-                        $row = mysqli_fetch_assoc($result);
-
-                        if(is_array($row) != 1){
-                            $_SESSION['valid'] = $row['matricule'];
-                            $_SESSION['nom'] = $row['nom'];
-                            $_SESSION['postnom'] = $row['postnom'];
-                            $_SESSION['prenom'] = $row['prenom'];
-                            $_SESSION['filiere'] = $row['filiere'];
-                            $_SESSION['promotion'] = $row['promotion'];
-                            $_SESSION['faculte'] = $row['faculte'];
-                            $_SESSION['id'] = $row['id'];
-                        }else{
-                            $message = "<div class=' text-center text-red-600'><p><i>Matricule ou mot de passe incorrect</i></p></div>";
-                            echo $message;
-                        }
-                        if(isset($_SESSION['valid'])){
-                            header("Location: accueil.php");
-                        }*/
 
                         //vérification du matricule et mot de passe
 
